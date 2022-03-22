@@ -1,0 +1,208 @@
+/* MAIN COLORS */
+:root {
+    --primary: #242d38;
+    --secondary: #efd592;
+}
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+  
+    background: transparent;
+  
+    font-family: inherit;
+    
+    text-decoration: none;
+  }
+  
+  ol, ul, li {
+    list-style:none;
+    display:block;
+  }
+  
+  table {
+    border-collapse:collapse;
+    border-spacing:0
+  }
+  
+  a img {
+    border: none
+  }
+  
+  button, a {
+    cursor: pointer;
+    color: inherit
+  }
+  
+  textarea {
+    resize: none
+  }
+  
+  button, input, textarea, select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    border-radius: 0
+  }
+
+
+/* ICONs */
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size was 24px*/
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+  body {
+      background-color: var(--primary);
+      font-family: 'Poppins', sans-serif;
+  }
+
+
+  /* HEADER */
+  .topnav {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    
+    width: 100%;
+    height: 60px;
+    padding: 0 15px 0 10px;
+    
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-bottom: var(--secondary) solid 1px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.topnav h1 {
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* CARDS' CONTAINER */
+#root {
+    max-width: 1000px;
+    margin: 110px auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90px 20px;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    padding: 40px;
+    width: 400px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+    width: 40px;
+
+    font-size:24px;
+    background-color: var(--primary);
+    border: var(--secondary) 1px solid;
+    color: var(--secondary);
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.sub, .text{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.text {
+    margin-bottom: 10px;
+}
+
+hr {
+    margin: 10px 0;
+    border-bottom: 2px solid;
+}
+
+button {
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(100% - 80px);
+    height: 60px;
+
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+
+}
+
+button:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
+    border: var(--primary) solid 1px;
+}
+
+@media only screen and (max-width: 900px) {
+    .card{
+        margin: 0 40px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .topnav h1 {
+        font-size: 16px;
+    }
+}
